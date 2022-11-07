@@ -23,6 +23,7 @@
             <String label="Status" v-model="value.status" :editMode="editMode"/>
             <String label="UserId" v-model="value.userId" :editMode="editMode"/>
             <String label="Address" v-model="value.address" :editMode="editMode"/>
+            <Number label="Price" v-model="value.price" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -197,5 +198,6 @@
     }
 </script>
 
+            <Number label="StoreOrderId" v-model="value.storeOrderId" :editMode="editMode"/>
             <String label="Userid" v-model="value.userid" :editMode="editMode"/>
             <String label="Qty" v-model="value.qty" :editMode="editMode"/>

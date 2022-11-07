@@ -74,6 +74,7 @@
                 'status': '',
                 'userId': '',
                 'address': '',
+                'price': 0,
             }
         },
         methods:{
@@ -119,5 +120,6 @@
     }
 </style>
 
+                'storeOrderId': 0,
                 'userid': '',
                 'qty': '',

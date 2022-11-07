@@ -15,6 +15,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -24,6 +25,7 @@
                             [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Price :  {{data.price }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -111,6 +113,7 @@
                 'status': '',
                 'userId': '',
                 'address': '',
+                'price': 0,
             }
         },
         methods: {
@@ -142,6 +145,8 @@
     }
 </style>
 
+                            [ StoreOrderId :  {{data.storeOrderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Userid :  {{data.userid }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                'storeOrderId': 0,
                 'userid': '',
                 'qty': '',

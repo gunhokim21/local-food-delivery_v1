@@ -21,6 +21,12 @@ public class Order  {
     
     
     
+    private Long storeOrderId;
+    
+    
+    
+    
+    
     private Long orderId;
     
     
@@ -59,6 +65,14 @@ public class Order  {
 
         DeliveryStarted deliveryStarted = new DeliveryStarted(this);
         deliveryStarted.publishAfterCommit();
+
+    }
+    @PreUpdate
+    public void onPreUpdate(){
+        // Get request from Order
+        //localfooddelivery.external.Order order =
+        //    Application.applicationContext.getBean(localfooddelivery.external.OrderService.class)
+        //    .getOrder(/** mapping value needed */);
 
     }
 
@@ -112,8 +126,4 @@ public class Order  {
 
         
     }
-
-
-    @PreUpdate
-    public void onPreUpdate(){}
 }

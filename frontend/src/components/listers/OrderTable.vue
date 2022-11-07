@@ -72,6 +72,7 @@
                     { text: "status", value: "status" },
                     { text: "userId", value: "userId" },
                     { text: "address", value: "address" },
+                    { text: "price", value: "price" },
                 ],
             order : [],
             newValue: {},
@@ -95,6 +96,7 @@
                 'status': '',
                 'userId': '',
                 'address': '',
+                'price': 0,
             }
         },
         methods: {
@@ -116,6 +118,8 @@
     }
 </script>
 
+                    { text: "storeOrderId", value: "storeOrderId" },
                     { text: "userid", value: "userid" },
+                'storeOrderId': 0,
                 'userid': '',
                 'qty': '',
