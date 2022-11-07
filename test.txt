@@ -1,3 +1,4 @@
+mvn clean (재기동시)
 mvn spring-boot:run
 
 http :8081/orders orderId=1  qty=2 userId="Hwang"
