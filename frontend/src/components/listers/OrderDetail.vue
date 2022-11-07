@@ -23,6 +23,9 @@
             <div>
                 <String label="Address" v-model="item.address" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Number label="Price" v-model="item.price" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>
@@ -112,5 +115,6 @@
         },
     };
 </script>
+                <Number label="StoreOrderId" v-model="item.storeOrderId" :editMode="editMode" @change="change" />
                 <String label="Userid" v-model="item.userid" :editMode="editMode" @change="change" />
                 <String label="Qty" v-model="item.qty" :editMode="editMode" @change="change" />

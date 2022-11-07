@@ -32,6 +32,9 @@
                             <v-list-item-subtitle>
                                 Address :  {{item.address }}
                             </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                Price :  {{item.price }}
+                            </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
@@ -94,6 +97,8 @@
                     
                     
                     
+                    
+                    
                     this.$emit('selected', obj);
                 }
             },
@@ -101,4 +106,6 @@
     };
 </script>
 
+                                StoreOrderId :  {{item.storeOrderId }}
                                 Userid :  {{item.userid }}
+                    obj['storeOrderId'] = arr[4]; 
