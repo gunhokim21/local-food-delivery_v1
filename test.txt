@@ -15,3 +15,12 @@ http :8082/payments payid=1 orderId=1 amount=20000 status="주문됨"
 
 http :8082/payments
 http :8082/payments/1
+
+
+-- ingress 주소
+http aebb9dd6fc66040ab8cb37affbaa961b-227467029.ca-central-1.elb.amazonaws.com/orders
+
+-- 부하테스트 (clusterIP로)
+kubectl exec -it siege -- /bin/bash
+siege -c1 -t2S -v http http://10.100.178.26:8080
+exit
