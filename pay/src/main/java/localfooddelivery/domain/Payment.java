@@ -6,7 +6,6 @@ import javax.persistence.*;
 import localfooddelivery.PayApplication;
 import localfooddelivery.domain.PaymentApproved;
 import localfooddelivery.domain.PaymentCanceled;
-import localfooddelivery.domain.결제승인됨;
 import lombok.Data;
 
 @Entity
@@ -33,12 +32,6 @@ public class Payment {
         paymentCanceled.publishAfterCommit();
     }
 
-    @PrePersist
-    public void onPrePersist() {
-        결제승인됨 결제승인됨 = new 결제승인됨(this);
-        결제승인됨.publishAfterCommit();
-    }
-
     public static PaymentRepository repository() {
         PaymentRepository paymentRepository = PayApplication.applicationContext.getBean(
             PaymentRepository.class
@@ -46,23 +39,15 @@ public class Payment {
         return paymentRepository;
     }
 
-    public static void cancelPayment(OrderCanceled orderCanceled) {
-        /** Example 1:  new item 
-        Payment payment = new Payment();
-        repository().save(payment);
-
-        */
-
-        /** Example 2:  finding and process
+    public static void cancelPayment(OrderCanceled orderCanceled) {        
         
-        repository().findById(orderCanceled.get???()).ifPresent(payment->{
-            
-            payment // do something
-            repository().save(payment);
-
-
-         });
-        */
+        // modified 
+        repository().findById(orderCanceled.getOrderId()).ifPresent(payment->{
+            if (orderCanceled.getStatus() == "Canceled") {
+                payment.setStatus("Canceled");                
+                repository().save(payment);        
+            }
+        });       
 
     }
 }
